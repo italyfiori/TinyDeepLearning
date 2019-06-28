@@ -1,0 +1,2 @@
+# TinyDeepLearning
+python实现的一个简易深度学习框架，用于理解深度学习内部实现原理
