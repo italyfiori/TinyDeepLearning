@@ -46,7 +46,6 @@ data = datasets.load_digits()
 X = data.data
 y = data.target
 Y = to_categorical(y).astype('int')
-X = X.reshape((-1, 1, 8, 8))
 
 model = Sequential(SGD(learning_rate=0.01), SoftmaxCrossEntropy())
 model.add(Dense(512, X.shape[-1]))
@@ -141,6 +140,11 @@ from sequential import *
 from model import *
 import numpy as np
 
+data = datasets.load_digits()
+X = data.data
+y = data.target
+Y = to_categorical(y).astype('int')
+
 x = Input(X.shape)
 t0 = Dense(512)(x)
 t = Activation('relu')(t0)
@@ -177,7 +181,7 @@ data = datasets.load_digits()
 X = data.data
 y = data.target
 Y = to_categorical(y).astype('int')
-X = X.reshape((-1, 1, 8, 8))
+X = X.reshape((-1, 8, 8))
 
 x = Input(X.shape)
 t = RNN(70, return_type='sequence')(x)
