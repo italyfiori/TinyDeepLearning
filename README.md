@@ -94,35 +94,6 @@ plots(errs, accs)
 
 
 
-### 序列模型 示例3
-
-```python
-from sklearn import datasets
-from util import *
-from layer import *
-from sequential import *
-from model import *
-import numpy as np
-
-data = datasets.load_digits()
-X = data.data
-y = data.target
-Y = to_categorical(y).astype('int')
-X = X.reshape((-1, 1, 8, 8))
-
-x = Input(X.shape)
-t = RNN(70, return_type='sequence')(x)
-t = Activation('relu')(t) 
-t = Dense(50)(t)
-t = Activation('relu')(t)
-t = Reshape((-1, 8*50))(t)
-y = Dense(10)(t)
-
-model = Model(x, y)
-model.compile(SGD(learning_rate=0.01), SoftmaxCrossEntropy())
-errs, accs = model.fit(X, Y, 100)
-plots(errs, accs)
-```
 
 
 
@@ -135,6 +106,13 @@ from layer import *
 from sequential import *
 from model import *
 import numpy as np
+
+
+data = datasets.load_digits()
+X = data.data
+y = data.target
+Y = to_categorical(y).astype('int')
+X = X.reshape((-1, 1, 8, 8))
 
 x = Input(X.shape)
 t = Conv2D(64, filter_shape=(3,3))(x)
@@ -193,6 +171,13 @@ from layer import *
 from sequential import *
 from model import *
 import numpy as np
+
+
+data = datasets.load_digits()
+X = data.data
+y = data.target
+Y = to_categorical(y).astype('int')
+X = X.reshape((-1, 1, 8, 8))
 
 x = Input(X.shape)
 t = RNN(70, return_type='sequence')(x)
