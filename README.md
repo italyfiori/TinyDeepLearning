@@ -1,6 +1,6 @@
 ## TinyDeepLearning
 
-TinyDeepLearning是一个使用Python从底层实现的简易深度学习框架。API风格模仿Keras，底层使用Tensor自动进行梯度反向传播，计算模型实现了序列模型和计算图模型。该框架主要用于探究深度学习框架的内部实现原理，并不太关注高性能计算。
+TinyDeepLearning是一个使用Python从底层实现的简易深度学习框架。API风格模仿Keras，底层使用Tensor自动进行梯度反向传播，计算模型实现了序列模型和计算图模型。该框架主要用于探究深度学习框架的内部实现原理。
 
 
 
