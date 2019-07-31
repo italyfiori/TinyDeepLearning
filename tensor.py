@@ -286,7 +286,7 @@ class Tensor(object):
         return Tensor(data, parents=[self], op='relu', autograd=True)
         
     def sigmoid(self):
-        data = 1 / 1 + np.exp(-self.data)
+        data = 1 / (1 + np.exp(-self.data))
         return Tensor(data, parents=[self], op='sigmoid', autograd=True)
         
     def tahn(self):
