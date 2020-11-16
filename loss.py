@@ -5,6 +5,9 @@ from tensor import Tensor
 from util import *
 
 class Loss(object):
+	"""
+	Loss function base class
+	"""
 	def back_propagate(self, y, y_pred):
 		assert isinstance(y, Tensor)
 		assert isinstance(y_pred, Tensor)
@@ -13,7 +16,10 @@ class Loss(object):
 	def acc(self, y, p):
 		pass
 		
-class MSE(Loss):		
+class MSE(Loss):
+	"""
+	MSE loss function 
+	"""
 	def back_propagate(self, y, y_pred):
 		"""
 		从损失函数开始反向传播
@@ -29,6 +35,9 @@ class MSE(Loss):
 		return err, 0
 		
 class SoftmaxCrossEntropy(Loss):
+	"""
+	SoftmaxCrossEntropy loss function
+	"""
 	def back_propagate(self, y, y_pred):
 		super().back_propagate(y, y_pred)
 

@@ -2,6 +2,9 @@ from util import *
 import numpy as np
 
 class Tensor(object):
+    """
+    Basic tensor compute function 
+    """
     def set_trainable(self, trainable):
         self.trainable = trainable
         

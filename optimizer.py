@@ -2,6 +2,9 @@ from tensor import Tensor
 import numpy as np
 
 class Optimizer(object):
+	"""
+	Optimizer base class
+	"""
 	def set_layers(self, layers):
 		self.layers = layers
 		
@@ -10,6 +13,7 @@ class Optimizer(object):
 
 class SGD(Optimizer):
 	"""
+	SGD Optimizer
 	使用sgd更新需要更新的参数
 	"""
 	
@@ -31,6 +35,9 @@ class SGD(Optimizer):
 
 
 class Momentum(Optimizer):
+	"""
+	Momentum Optimizer
+	"""
 	def __init__(self, learning_rate = 0.01, momentum=0.9):
 		self.v = None
 		self.learning_rate = learning_rate
@@ -55,6 +62,9 @@ class Momentum(Optimizer):
 	
 		
 class RMSprop(Optimizer):
+	"""
+	RMSprop Optimizer
+	"""
 	def __init__(self, learning_rate=0.01, decay_rate=0.99):
 		self.h = None
 		self.learning_rate = learning_rate
@@ -79,6 +89,9 @@ class RMSprop(Optimizer):
 
 
 class Adam(Optimizer):
+	"""
+	Adam Optimizer
+	"""
 	def __init__(self, learning_rate=0.01, beta1=0.9, beta2=0.999):
 		self.m = None
 		self.v = None

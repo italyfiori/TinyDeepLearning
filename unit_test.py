@@ -3,6 +3,9 @@ import unittest
 from tensor import *
 
 class TestTensor(unittest.TestCase):
+    """
+    basic operation test
+    """
     def test_select(self):
         data = np.array(range(0, 9)).reshape(3,3).astype('int')
         a = Tensor(data, autograd=True)

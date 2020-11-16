@@ -8,6 +8,9 @@ import numpy as np
 from copy import copy
 
 class Model(object):
+    """
+    Grahp model class
+    """
     def __init__(self, input_placeholder, output_placeholder):
         """
         初始化模型参数 input output和layers

@@ -5,7 +5,9 @@ from placeholder import *
 
 
 class Layer(object):
-
+    """
+    neural network layer base class
+    """
     def __init__(self):
         self.parameters = []
         self.input_datas = None

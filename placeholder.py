@@ -3,7 +3,9 @@ from tensor import *
 
 
 class Input(object):
-	
+	"""
+	Placeholder for graph model
+	"""
 	def __init__(self, shape=None, depend_placeholders=None, input_layer=None):
 		self.id = None
 		self.tensor = None
