@@ -1,6 +1,5 @@
 ## TinyDeepLearning
-
-TinyDeepLearning是一个使用Python从底层实现的简易深度学习框架。API风格模仿Keras，底层使用Tensor自动进行梯度反向传播，计算模型实现了序列模型和计算图模型，其中计算图模型可以实现任意形式的图计算(包括残差连接、共享参数等)。 该框架主要用于探究深度学习框架的内部实现原理。
+TinyDeepLearning is a simple deep learning framework implemented from the scratch using Python. API style imitates Keras, the bottom layer uses the Tensor to carry on the gradient backpropagation automatically. the computational model implements the sequence model and the computational graph model, in which the computational graph model can realize any form of graph calculation (including residual connection, shared parameters, etc). This framework is mainly used to explore the internal implementation principle of deep learning framework.
 
 
 
@@ -30,9 +29,9 @@ TinyDeepLearning是一个使用Python从底层实现的简易深度学习框架�
 
 
 
-## 示例
+## Examples
 
-### 序列模型 示例1
+### Sequence model example 1
 
 ```python
 from sklearn import datasets
@@ -62,7 +61,7 @@ plots(errs, accs)
 
 
 
-### 序列模型 示例2
+### Sequence model example 2
 
 ```python
 from sklearn import datasets
@@ -96,7 +95,7 @@ plots(errs, accs)
 
 
 
-### 图模型 示例1
+### graph model example 1
 
 ```python
 from sklearn import datasets
@@ -130,7 +129,7 @@ plots(errs, accs)
 
 
 
-### 图模型 示例2
+### graph model example 2
 
 ```python
 from sklearn import datasets
@@ -166,7 +165,7 @@ plots(errs, accs)
 
 
 
-### 图模型 示例3
+### graph model example 3
 
 ```python
 from sklearn import datasets
